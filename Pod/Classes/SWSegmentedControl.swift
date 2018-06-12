@@ -329,7 +329,7 @@ open class SWSegmentedControl: UIControl {
     
     private func configureButton(_ button: SWSegmentedItem) {
         button.badgeView.label.font = self.badgeFont
-        button.textLabel.font = self.font
+        button.unselectedFont = self.font
         button.selectedFont = self.selectedFont
         button.setTitleColor(self.colorToUse(self.titleColor), for: .selected)
         button.setTitleColor(self.unselectedTitleColor, for: .normal)
