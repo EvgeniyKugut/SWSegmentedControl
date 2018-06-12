@@ -24,12 +24,6 @@ class SWSegmentedItem: UIButton {
         }
     }
     
-    var font: UIFont? {
-        didSet {
-            configureView()
-        }
-    }
-
     var title: String? {
         didSet {
             textLabel.text = title
