@@ -12,6 +12,12 @@ private let BadgeMargin: CGFloat = 5
 
 class SWSegmentedItem: UIButton {
     
+    var selectedFont: UIFont? {
+        didSet {
+            configureView()
+        }
+    }
+    
     var title: String? {
         didSet {
             textLabel.text = title
@@ -58,7 +64,9 @@ class SWSegmentedItem: UIButton {
     private func configureView() {
         if isSelected {
             textLabel.textColor = titleColor(for: .selected)
+            textLabel.font = selectedFont ?? font
         } else {
+            textLabel.font = font
             textLabel.textColor = titleColor(for: .normal)
         }
         
