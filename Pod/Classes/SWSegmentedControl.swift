@@ -12,7 +12,7 @@ private let BadgeMargin: CGFloat = 5
 private let DefaultTitleFont = UIFont.systemFont(ofSize: UIFont.systemFontSize)
 private let DefaultBadgeFont = UIFont.systemFont(ofSize: 12)
 
-@IBDesignable
+
 open class SWSegmentedControl: UIControl {
     
     open weak var delegate: SWSegmentedControlDelegate?
